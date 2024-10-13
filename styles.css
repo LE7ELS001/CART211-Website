@@ -1,0 +1,377 @@
+/*
+*Font
+*/
+@font-face {
+    font-family: Stardew-Valley;
+    src: url("Assets/Stardew_Valley.ttf");
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/*
+* EntryPage
+*/
+
+.full-height {
+    /* background-image: url("Assets/background.png"); */
+    background-color: black;
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+}
+
+.row-video {
+    height: 100%;
+}
+
+.col-video {
+    height: 100%;
+}
+
+.background {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.titleImage {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 100%;
+    width: 60%;
+    height: auto;
+    z-index: 10;
+}
+
+.video {
+    z-index: 9;
+}
+
+.Entry {
+    z-index: 10;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 100%;
+    width: 15%;
+    height: auto;
+
+}
+
+.accordion-item {
+    background-image: url("Assets/background.png");
+    background-size: cover;
+
+}
+
+.accordion-button {
+    padding: 3px 3px;
+
+}
+
+.footerContainer {
+    padding: 0;
+    margin: 0;
+
+    width: 100%;
+}
+
+.accordion-button {
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+
+}
+
+.accordion-item {
+    padding: 0;
+    margin: 0;
+}
+
+
+
+
+/*------------------------------------------------------
+
+/*
+* main Page
+*/
+
+.mainPage {
+    background-image: url("Assets/background.png");
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    margin-top: 0;
+
+
+}
+
+.navbar {
+    background-color: rgba(50, 36, 250, 0.2);
+}
+
+.Website {
+    margin-right: 6rem;
+    font-family: Stardew-Valley, sans-serif;
+    font-size: 40px;
+}
+
+.Blog {
+    margin-right: 6rem;
+    font-family: Stardew-Valley, sans-serif;
+    font-size: 40px;
+}
+
+
+
+.home-link {
+    font-family: Stardew-Valley, sans-serif;
+    font-size: 40px;
+}
+
+.gallery {
+    margin-right: 3rem;
+    font-family: Stardew-Valley, sans-serif;
+    font-size: 40px;
+}
+
+.Home {
+    margin-right: 5rem;
+    font-family: Stardew-Valley, sans-serif;
+    font-size: 40px;
+}
+
+.gallery-list {
+    font-family: Stardew-Valley, sans-serif;
+    font-size: 30px;
+}
+
+.Forums {
+    margin-right: 2rem;
+    font-family: Stardew-Valley, sans-serif;
+    font-size: 40px;
+}
+
+
+
+
+.carousel-photo {
+    max-width: 1250px;
+    width: 100%;
+}
+
+.container-carouse {
+    margin-top: 2.3rem;
+
+}
+
+/*-----------------------------------
+/*
+*GalleryPhoto page
+*/
+
+.mainGalleryPage {
+    background-image: url("Assets/background.png");
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    margin-top: 0;
+    overflow: visible;
+
+
+}
+
+.text-frame {
+    margin: 15px;
+
+    font-size: 25px;
+    background-color: rgba(255, 255, 255, 0.4);
+
+}
+
+.description-text {
+    padding: 15px;
+    border: 2px solid chocolate;
+}
+
+.photo {
+    margin-top: 30px;
+    display: flex;
+
+}
+
+.all-seasons {
+    margin-top: 15px;
+}
+
+.seasons {
+    margin-top: 15px;
+}
+
+
+/*-----------------------------------------
+
+/*
+*list page
+*/
+
+.listGallery {
+    background-image: url("Assets/background.png");
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    margin-top: 0;
+    overflow: visible;
+}
+
+.list-table {
+    margin-top: 20px;
+}
+
+.list-table {
+    font-size: 20px;
+}
+
+.list-description {
+    padding: 15px;
+    border: 2px solid chocolate;
+}
+
+.text-frame {
+    margin: 15px;
+
+    font-size: 25px;
+    background-color: rgba(255, 255, 255, 0.3);
+
+}
+
+.list-header {
+    background-color: rgb(22, 255, 33);
+    text-align: center;
+
+}
+
+.table-frame {
+    margin: 5px;
+    object-fit: cover;
+}
+
+
+.list-table th {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+
+.list-table td {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.mainContent {
+    text-align: center;
+}
+
+/*--------------------------------------------------
+
+/*
+* Summer-BlueBerry tart 
+*/
+
+.Blueberry-tart {
+    background-image: url("../../Assets/background.png");
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    margin-top: 0;
+    overflow: visible;
+}
+
+.test {
+    width: 100%;
+    font-size: large;
+}
+
+.MainContent {
+    margin-top: 5%;
+    margin-right: 2%;
+    margin-left: 3%;
+    background-color: rgba(255, 255, 255, 0.3);
+
+
+}
+
+.Name {
+
+    margin-top: 5%;
+    font-size: 50px;
+    text-align: center;
+
+
+}
+
+.Name2 {
+
+    font-size: 20px;
+
+}
+
+.Dish-Video {
+    margin-right: 2%;
+    margin-top: 5%;
+}
+
+.Blueberry-tart-video {
+    width: 1280px;
+    height: 720px;
+}
+
+.content-image {
+    background-color: white;
+}
+
+.recipe-text {
+    font-size: large;
+
+}
+
+.recipe-image {
+    padding: 1%;
+}
+
+.recipe-inner-image {
+    margin: 1%;
+}
+
+.recipe-title {
+    background-color: rgba(0, 0, 255, 0.315);
+    margin-top: 3%;
+    padding: 1%;
+    font-size: 40px;
+}
+
+.recipe-frame {
+    margin: 15px;
+}
+
+.comment-frame {
+    margin-top: 3%;
+}
+
+.comment-inner-frame {
+    margin: 1%;
+    width: 100%;
+    background-color: rgba(0, 195, 255, 0.658);
+}
+
+.comment-title {
+    font-size: 30px;
+    color: black;
+    background-color: darkcyan;
+}
