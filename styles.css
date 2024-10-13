@@ -285,7 +285,7 @@
 */
 
 .Blueberry-tart {
-    background-image: url("../../Assets/background.png");
+    background-image: url("Assets/background.png");
     background-size: cover;
     background-position: center;
     height: 100%;
