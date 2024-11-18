@@ -8,6 +8,22 @@
     font-style: normal;
 }
 
+/*
+* footer
+*/
+
+footer {
+    background-color: #333;
+    color: #fff;
+    font-size: small;
+    padding-top: 0.8%;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+
+}
+
+
 
 /*
 * EntryPage
@@ -40,11 +56,11 @@
 
 .titleImage {
     position: absolute;
-    top: 20px;
+    top: 5%;
     left: 50%;
     transform: translateX(-50%);
     max-width: 100%;
-    width: 60%;
+    width: 50%;
     height: auto;
     z-index: 10;
 }
@@ -56,13 +72,18 @@
 .Entry {
     z-index: 10;
     position: absolute;
-    top: 50%;
+    top: 65%;
     left: 50%;
     transform: translateX(-50%);
     max-width: 100%;
     width: 15%;
     height: auto;
+    transition: transform 0.3s ease;
 
+}
+
+.Entry:hover {
+    transform: translateX(-50%) scale(1.2);
 }
 
 .accordion-item {
@@ -94,6 +115,9 @@
     padding: 0;
     margin: 0;
 }
+
+
+
 
 
 
@@ -285,7 +309,7 @@
 */
 
 .Blueberry-tart {
-    background-image: url("Assets/background.png");
+    background-image: url("../../Assets/background.png");
     background-size: cover;
     background-position: center;
     height: 100%;

@@ -11,6 +11,20 @@
     <link rel="stylesheet" href="styles.css">
 
     <style>
+        body {
+            cursor: url("Assets/cursor.cur"), auto;
+        }
+
+        a:hover,
+        button:hover {
+            cursor: url("Assets/cursor_hover.cur"), auto;
+        }
+
+        .audio-player button:hover {
+            cursor: url("Assets/cursor_hover.cur"), auto;
+
+        }
+
         .footerFrame {
             margin-top: 1px;
         }
@@ -31,6 +45,21 @@
         .footerButton.accordion-button:not(.collapsed) {
             background-color: rgb(37, 110, 206);
         }
+
+        .mainScreen {
+            height: 100vh;
+        }
+
+        .mainPageAudio {
+            z-index: 10;
+            position: absolute;
+            top: 90%;
+            left: 14%;
+            transform: translateX(-50%);
+            max-width: 100%;
+            width: 15%;
+            height: auto;
+        }
     </style>
 </head>
 
@@ -39,19 +68,36 @@
 <body>
 
 
-    <div class="container-fluid full-height">
+    <div class="container-fluid mainScreen">
         <div class="row row-video" style="border: 1px solid red;">
 
             <div class="col-12 col-video g-0 ">
-                <video class="w-100 h-100" style="object-fit: cover;" src="Assets/mainPage.mp4" autoplay muted loop>
+                <video class="w-100 h-100" id="backgroundVideo" style="object-fit: cover;" src="Assets/mainPage.mp4"
+                    loop>
                 </video>
-                <img class="titleImage" src="Assets/Logo.png" alt="Stardew valley dishes in real life">
+                <img class="titleImage" src="Assets/Logo2.png" alt="Stardew valley dishes in real life">
 
                 <a href="mainpage.html"><img class="Entry" src="Assets/entry.png" alt="Explore"></a>
 
             </div>
 
-            <div class="col-12 g-0">
+
+            <div class="audio-player mainPageAudio">
+                <audio id="backgorundAudio" controls>
+                    <source src="Assets/MainPageMusic.aac" type="audio/aac">
+                </audio>
+            </div>
+
+            <footer>
+                <ul>
+                    <li>Privacy Policy</li>
+                    <li>Terms of Service</li>
+                    <li>Contact</li>
+                </ul>
+                <p>© 2024 stardew Valley Dishes in real life. All rights reserved.</p>
+            </footer>
+
+            <!-- <div class="col-12 g-0">
 
                 <div class="accordion " id="accordionExample">
                     <div class="accordion-item ">
@@ -87,7 +133,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
 
         </div>
 
@@ -100,9 +146,34 @@
     </div>
 
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
+    <script>
+
+        const video = document.getElementById('backgroundVideo');
+        const audio = document.getElementById('backgorundAudio');
+
+        //play 
+        audio.addEventListener('play', () => {
+            if (video.paused) {
+                video.play();
+            }
+        });
+
+        //pause
+        audio.addEventListener('pause', () => {
+            if (!video.paused) {
+                video.pause();
+            }
+        });
+
+        //loop 
+        video.addEventListener('ended', () => {
+            video.currentTime = 0;
+            video.play();
+        });
+
+
+
+    </script>
 </body>
 
 </html>
