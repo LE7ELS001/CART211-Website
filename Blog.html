@@ -15,20 +15,96 @@
             background-image: url("Assets/background.png");
             background-size: cover;
             background-position: center;
-            height: 100vh;
+            min-height: 100vh;
             margin-top: 0;
         }
 
         .blogTitle {
             margin-left: 25%;
             margin-right: 25%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 15px;
+
+        }
+
+
+        .blogTitle img {
+            width: 550px;
+            height: auto;
+        }
+
+        .wrapPaper {
+            margin-top: 25px;
+            width: 100%;
+            margin-bottom: 25px;
+            padding: 30px;
+            padding-top: 15px;
+            border: 15px solid transparent;
+            border-image: url('Assets/border_image.png') 33 stretch;
+            background-color: #FFF3CC;
+            border-image-slice: 33%;
+
+            /* border: 15px solid transparent;
+            border-image: url('Assets/border_image.png') 33 stretch;
+            background-color: #FFF3CC;
+            border-image-slice: 33%; */
+
+
+        }
+
+        .articleTitle .blogContentTitle {
+            text-align: center;
+            text-indent: -40px;
+            font-family: Comment;
+            font-size: 50px;
+            color: #d33e03;
+
+
+        }
+
+        .postTime {
+
+            display: flex;
+            align-items: center;
+            text-align: center;
+            padding-left: 120px;
+            font-size: 15px;
+
+        }
+
+        .postTime h1,
+        h2 {
+            font-weight: bold;
+            font-size: 18px;
+            padding-top: 3px;
+            color: rgb(214, 104, 1);
+
+        }
+
+        .article {
+            font-weight: bold;
+            margin-top: 8px;
+            font-size: 18px;
+        }
+
+
+
+        .User {
+            padding-top: 10px;
+            padding-left: 50px;
+        }
+
+        .blogContainer {
+            width: 800px;
         }
     </style>
 </head>
 
 <body>
-    <div class="container-fluid blogPage g-0" style="border: 1px solid red;">
-        <nav class="navbar navbar-expand-lg  w-100 " style="border: red solid 2px; ">
+    <div class="container-fluid blogPage g-0">
+        <nav class="navbar navbar-expand-lg  w-100 ">
             <div class="container-fluid ">
                 <a class="navbar-brand" href="mainpage.html"><img src="Assets/Cooking_Icon.png" alt="Icon"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -37,132 +113,70 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse navbar-centerItem" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-5 mx-auto mb-2 mb-lg-0">
+                    <ul class="navbar-nav me-15 mx-auto mb-2 mb-lg-0">
                         <li class="nav-item Home">
                             <a class="nav-link active home-link" aria-current="page" href="mainpage.html">HOME</a>
                         </li>
-                        <li class="nav-item dropdown  gallery">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                GALLERY
-                            </a>
-                            <ul class="dropdown-menu mx-5 gallery-list">
-                                <li><a class="dropdown-item" href="Gallery.html">Photo Gallery</a></li>
-                                <li><a class="dropdown-item" href="List.html">List</a></li>
+                        <li class="nav-item">
+                            <a class="nav-link gallery" href="Gallery.html">GALLERY</a>
+                        </li>
 
-                            </ul>
-                        <li class="nav-item  Forums">
-                            <a class="nav-link" href="#">FORUMS</a>
+                        <li class="nav-item">
+                            <a class="nav-link list" href="List.html">LIST</a>
+                        </li>
+                        <li class="nav-item mx-4 searchBar  ">
+                            <a class="nav-link searchBarText" href="Search.html">SEARCH</a>
                         </li>
                         </li>
                         <li class="nav-item mx-4 Blog">
-                            <a class="nav-link" href="#">BLOG</a>
+                            <a class="nav-link blogText" href="Blog.html">BLOG</a>
                         </li>
                         <li class="nav-item mx-4 Website  ">
-                            <a class="nav-link" href="https://www.stardewvalley.net/">OFFICIAL WEBSITE</a>
+                            <a class="nav-link websiteText" href="https://www.stardewvalley.net/">OFFICIAL WEBSITE</a>
                         </li>
-
                     </ul>
-                    <form class="d-flex searchBar" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-success" type="submit">Search</button>
-                    </form>
                 </div>
             </div>
         </nav>
 
-        <div class="row blogTitle " style="border: 1px solid greenyellow;">
-            <img src="Assets/Logo.png" alt="Blog" class="img-fluid">
+        <div class="row blogTitle">
+            <img src="Assets/Logo2.png" alt="Blog" class="img-fluid">
         </div>
-        <div class="container  blogContainer" style="border: 1px solid rgb(4, 197, 245);">
-            <div class="row blogContent" style="border: 2px solid purple;">
+        <div class="container  blogContainer">
+            <div class="row blogContent">
+
                 <div class="col-12 wrapPaper " id="firstArticle">
-                    <div class="row articleTitle" style="border: 1px solid orange;">
+                    <div class="row articleTitle">
                         <div class="col-2 User">
-                            <img src="Assets/Cooking_Icon.png" alt="UserImage">
+                            <img src="Assets/White_Chicken.png" alt="UserImage">
                         </div>
                         <div class="col-10 blogContentTitle">
-                            <h1>This is a blog </h1>
+                            <h1>Upload some dishes </h1>
                         </div>
                     </div>
 
-                    <div class="row postTime " style="border: 2px solid greenyellow;">
+                    <div class="row  ">
                         <div class="col-2"></div>
-                        <div class="col-4 Author"> Me </div>
-                        <div class="col-2"> <span>post on</span></div>
-                        <div class="col-4 PostDate"> October 24nd,2024</div>
-                    </div>
-
-                    <div class="row article " style="border: 1px solid darkblue;">
-                        <div class="col-12">
-
-                            this is the main content of the blog
-                            this is the main content of the blog
-                            this is the main content of the blog
-                            this is the main content of the blog
-                            this is the main content of the blog
-                            this is the main content of the blog
-                            this is the main content of the blog
-                            this is the main content of the blog
-                            this is the main content of the blog
-                            this is the main content of the blog
-                            this is the main content of the blog
-                            this is the main content of the blog
-                            this is the main content of the blog
-                            this is the main content of the blog
-                            this is the main content of the blog
-                            this is the main content of the blog
-                            this is the main content of the blog
-                            this is the main content of the blog
+                        <div class="col-10 d-flex postTime">
+                            <h1>Junming</h1>&nbsp; <span>post on</span>&nbsp;
+                            <h2>November 23rd, 2024</h2>
                         </div>
-
-                    </div>
-
-                </div>
-
-                <div class="col-12 wrapPaper " id="scondArticle" style="margin-top: 20px;">
-                    <div class="row articleTitle" style="border: 1px solid orange;">
-                        <div class="col-2 User">
-                            <img src="Assets/Cooking_Icon.png" alt="UserImage">
-                        </div>
-                        <div class="col-10 blogContentTitle">
-                            <h1>This is a blog </h1>
-                        </div>
-                    </div>
-
-                    <div class="row postTime " style="border: 2px solid greenyellow;">
-                        <div class="col-2"></div>
-                        <div class="col-4 Author"> Me </div>
-                        <div class="col-2"> <span>post on</span></div>
-                        <div class="col-4 PostDate"> October 24nd,2024</div>
                     </div>
 
                     <div class="row article ">
                         <div class="col-12">
 
-                            this is the main content of the blog
-                            this is the main content of the blog
-                            this is the main content of the blog
-                            this is the main content of the blog
-                            this is the main content of the blog
-                            this is the main content of the blog
-                            this is the main content of the blog
-                            this is the main content of the blog
-                            this is the main content of the blog
-                            this is the main content of the blog
-                            this is the main content of the blog
-                            this is the main content of the blog
-                            this is the main content of the blog
-                            this is the main content of the blog
-                            this is the main content of the blog
-                            this is the main content of the blog
-                            this is the main content of the blog
-                            this is the main content of the blog
+                            Upload some new dishes : <br><br>
+                            &nbsp;"Blackberry Cobbler" <br> &nbsp;"Cookie"<br> &nbsp;"Farmer's Lunch"<br>&nbsp;"Pink
+                            Cake"<br> &nbsp;"Pepper
+                            Poppers"<br>&nbsp;"Fish Stew"<br>&nbsp;"Strange Bun"<br>&nbsp;"Maki Roll"
                         </div>
 
                     </div>
 
                 </div>
+
+
 
             </div>
         </div>

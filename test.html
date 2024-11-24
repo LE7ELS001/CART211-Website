@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Border Image Example</title>
+    <style>
+        .wrapPaper {
+            width: 80%;
+            margin: 50px auto;
+            padding: 30px;
+            border: 15px solid transparent;
+            border-image: url('Assets/border_image.png') 33 stretch;
+            background-color: #FFF3CC;
+            border-image-slice: 33%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="wrapPaper">
+        <h1>This is a test of the border-image</h1>
+        <p>If the border image works, you should see a custom border around this box.</p>
+    </div>
+
+</body>
+
+</html>
