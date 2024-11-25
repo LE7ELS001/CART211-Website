@@ -97,44 +97,6 @@
                 <p>© 2024 stardew Valley Dishes in real life. All rights reserved.</p>
             </footer>
 
-            <!-- <div class="col-12 g-0">
-
-                <div class="accordion " id="accordionExample">
-                    <div class="accordion-item ">
-                        <h2 class="accordion-header ">
-                            <button class="accordion-button collapsed footerButton" type="button"
-                                data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false"
-                                aria-controls="collapseOne">
-                                Sources
-                            </button>
-                        </h2>
-                        <div id="collapseOne" class="accordion-collapse collapse " data-bs-parent="#accordionExample">
-                            <div class="accordion-body" style="color: aliceblue;">
-                                <p>Video Source: 星露谷脆皮饼：没有比这更好吃的了！！<a
-                                        href="https://www.bilibili.com/video/BV1yzpFedE67/?spm_id_from=333.999.0.0&vd_source=5b5532ac882afccc678cec36daf4390a">https://www.bilibili.com/video/BV1yzpFedE67/?spm_id_from=333.999.0.0&vd_source=5b5532ac882afccc678cec36daf4390a</a>
-                                </p>
-                                <p>Video Source:酱料女皇开播了：粉红蛋糕是真实存在的！！ <a
-                                        href="https://www.bilibili.com/video/BV1Yr421F7TY/?spm_id_from=333.999.0.0&vd_source=5b5532ac882afccc678cec36daf4390a">https://www.bilibili.com/video/BV1Yr421F7TY/?spm_id_from=333.999.0.0&vd_source=5b5532ac882afccc678cec36daf4390a</a>
-                                </p>
-                                <p>Font : Stardew_Valley.otf <a
-                                        href="https://www.dropbox.com/scl/fo/yj7f693fastcxousb4a77/ALOsUplSqL1DSpqk6iJ9sK0?rlkey=jt2mobz467ah9vhcyf404244e&e=1&dl=0">https://www.dropbox.com/scl/fo/yj7f693fastcxousb4a77/ALOsUplSqL1DSpqk6iJ9sK0?rlkey=jt2mobz467ah9vhcyf404244e&e=1&dl=0</a>
-                                </p>
-                                <p>Background : BZmfeAI.png <a
-                                        href="https://imgur.com/BZmfeAI">https://imgur.com/BZmfeAI</a></p>
-
-                                <p>Background : PennyPan2-1024x613.png <a
-                                        href="https://www.stardewvalley.net/media/">https://www.stardewvalley.net/media/</a>
-                                </p>
-
-                                <p>Icon : Cooking_Icon.png <a
-                                        href="https://stardewvalleywiki.com/File:Cooking_Icon.png">https://stardewvalleywiki.com/File:Cooking_Icon.png</a>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div> -->
-
         </div>
 
 
@@ -147,6 +109,253 @@
 
 
     <script>
+
+        //preload
+        document.addEventListener("DOMContentLoaded", function () {
+            // localStorage.removeItem('props');
+            let props = JSON.parse(localStorage.getItem('props')) || [];
+
+            //delete the one you don't need
+            // props = props.filter(item => item !== "Blueberry-tart");
+            props = props.filter((value, index, self) => self.indexOf(value) === index);
+            // console.log(props);
+            props = props.filter(item => typeof item === 'object');
+
+
+            let dish = {
+                name: "Strange-bun",
+                category: "Winter",
+            };
+
+            // Check if the dish is already in the list to avoid duplicate entries
+            let dishExists = props.some(item => item.name === dish.name && item.category === dish.category);
+            if (!dishExists) {
+                props.push(dish);
+                localStorage.setItem('props', JSON.stringify(props));
+            }
+
+            // Log the updated props array to the console to check its contents
+            console.log(props);
+        });
+
+        document.addEventListener("DOMContentLoaded", function () {
+            // localStorage.removeItem('props');
+            let props = JSON.parse(localStorage.getItem('props')) || [];
+
+            //delete the one you don't need
+            // props = props.filter(item => item !== "Blueberry-tart");
+            props = props.filter((value, index, self) => self.indexOf(value) === index);
+            // console.log(props);
+            props = props.filter(item => typeof item === 'object');
+
+
+            let dish = {
+                name: "Pepper-poppers",
+                category: "Winter",
+            };
+
+            // Check if the dish is already in the list to avoid duplicate entries
+            let dishExists = props.some(item => item.name === dish.name && item.category === dish.category);
+            if (!dishExists) {
+                props.push(dish);
+                localStorage.setItem('props', JSON.stringify(props));
+            }
+
+            // Log the updated props array to the console to check its contents
+            console.log(props);
+        });
+
+        document.addEventListener("DOMContentLoaded", function () {
+            // localStorage.removeItem('props');
+            let props = JSON.parse(localStorage.getItem('props')) || [];
+
+            //delete the one you don't need
+            // props = props.filter(item => item !== "Blueberry-tart");
+            props = props.filter((value, index, self) => self.indexOf(value) === index);
+            // console.log(props);
+            props = props.filter(item => typeof item === 'object');
+
+
+            let dish = {
+                name: "Cookie",
+                category: "Winter",
+            };
+
+            // Check if the dish is already in the list to avoid duplicate entries
+            let dishExists = props.some(item => item.name === dish.name && item.category === dish.category);
+            if (!dishExists) {
+                props.push(dish);
+                localStorage.setItem('props', JSON.stringify(props));
+            }
+
+            // Log the updated props array to the console to check its contents
+            console.log(props);
+        });
+
+
+        document.addEventListener("DOMContentLoaded", function () {
+            // localStorage.removeItem('props');
+            let props = JSON.parse(localStorage.getItem('props')) || [];
+
+            //delete the one you don't need
+            // props = props.filter(item => item !== "Blueberry-tart");
+            props = props.filter((value, index, self) => self.indexOf(value) === index);
+            // console.log(props);
+            props = props.filter(item => typeof item === 'object');
+
+
+            let dish = {
+                name: "Pink-cake",
+                category: "Summer",
+            };
+
+            // Check if the dish is already in the list to avoid duplicate entries
+            let dishExists = props.some(item => item.name === dish.name && item.category === dish.category);
+            if (!dishExists) {
+                props.push(dish);
+                localStorage.setItem('props', JSON.stringify(props));
+            }
+
+            // Log the updated props array to the console to check its contents
+            console.log(props);
+        });
+
+        document.addEventListener("DOMContentLoaded", function () {
+            // localStorage.removeItem('props');
+            let props = JSON.parse(localStorage.getItem('props')) || [];
+
+            //delete the one you don't need
+            // props = props.filter(item => item !== "Blueberry-tart");
+            props = props.filter((value, index, self) => self.indexOf(value) === index);
+            // console.log(props);
+            props = props.filter(item => typeof item === 'object');
+
+
+            let dish = {
+                name: "Maki-roll",
+                category: "Summer",
+            };
+
+            // Check if the dish is already in the list to avoid duplicate entries
+            let dishExists = props.some(item => item.name === dish.name && item.category === dish.category);
+            if (!dishExists) {
+                props.push(dish);
+                localStorage.setItem('props', JSON.stringify(props));
+            }
+
+            // Log the updated props array to the console to check its contents
+            console.log(props);
+        });
+
+
+        document.addEventListener("DOMContentLoaded", function () {
+            // localStorage.removeItem('props');
+            let props = JSON.parse(localStorage.getItem('props')) || [];
+
+            //delete the one you don't need
+            // props = props.filter(item => item !== "Blueberry-tart");
+            props = props.filter((value, index, self) => self.indexOf(value) === index);
+            // console.log(props);
+            props = props.filter(item => typeof item === 'object');
+
+
+            let dish = {
+                name: "Blueberry-tart",
+                category: "Summer",
+            };
+
+            // Check if the dish is already in the list to avoid duplicate entries
+            let dishExists = props.some(item => item.name === dish.name && item.category === dish.category);
+            if (!dishExists) {
+                props.push(dish);
+                localStorage.setItem('props', JSON.stringify(props));
+            }
+
+            // Log the updated props array to the console to check its contents
+            console.log(props);
+        });
+
+        document.addEventListener("DOMContentLoaded", function () {
+            // localStorage.removeItem('props');
+            let props = JSON.parse(localStorage.getItem('props')) || [];
+
+            //delete the one you don't need
+            // props = props.filter(item => item !== "Blueberry-tart");
+            props = props.filter((value, index, self) => self.indexOf(value) === index);
+            // console.log(props);
+            props = props.filter(item => typeof item === 'object');
+
+
+            let dish = {
+                name: "Farmer-lunch",
+                category: "Spring",
+            };
+
+            // Check if the dish is already in the list to avoid duplicate entries
+            let dishExists = props.some(item => item.name === dish.name && item.category === dish.category);
+            if (!dishExists) {
+                props.push(dish);
+                localStorage.setItem('props', JSON.stringify(props));
+            }
+
+            // Log the updated props array to the console to check its contents
+            console.log(props);
+        });
+
+        document.addEventListener("DOMContentLoaded", function () {
+            // localStorage.removeItem('props');
+            let props = JSON.parse(localStorage.getItem('props')) || [];
+
+            //delete the one you don't need
+            // props = props.filter(item => item !== "Blueberry-tart");
+            props = props.filter((value, index, self) => self.indexOf(value) === index);
+            // console.log(props);
+            props = props.filter(item => typeof item === 'object');
+
+
+            let dish = {
+                name: "Fish-stew",
+                category: "Autumn",
+            };
+
+            // Check if the dish is already in the list to avoid duplicate entries
+            let dishExists = props.some(item => item.name === dish.name && item.category === dish.category);
+            if (!dishExists) {
+                props.push(dish);
+                localStorage.setItem('props', JSON.stringify(props));
+            }
+
+            // Log the updated props array to the console to check its contents
+            console.log(props);
+        });
+
+
+        document.addEventListener("DOMContentLoaded", function () {
+            // localStorage.removeItem('props');
+            let props = JSON.parse(localStorage.getItem('props')) || [];
+
+            //delete the one you don't need
+            // props = props.filter(item => item !== "Blueberry-tart");
+            props = props.filter((value, index, self) => self.indexOf(value) === index);
+            // console.log(props);
+            props = props.filter(item => typeof item === 'object');
+
+
+            let dish = {
+                name: "Blackberry-cobbler",
+                category: "Autumn",
+            };
+
+            // Check if the dish is already in the list to avoid duplicate entries
+            let dishExists = props.some(item => item.name === dish.name && item.category === dish.category);
+            if (!dishExists) {
+                props.push(dish);
+                localStorage.setItem('props', JSON.stringify(props));
+            }
+
+            // Log the updated props array to the console to check its contents
+            console.log(props);
+        });
 
         const video = document.getElementById('backgroundVideo');
         const audio = document.getElementById('backgorundAudio');
