@@ -11,6 +11,9 @@
     <link rel="icon" href="Assets/Cooking_Icon.png" type="image/x-icon">
 
     <style>
+        /*
+        result display 
+        */
         .resultText {
             margin-top: 5px;
         }
@@ -105,6 +108,8 @@
     </div>
 
     <script>
+
+
         function search() {
 
             event.preventDefault();
@@ -113,10 +118,6 @@
             let props = JSON.parse(localStorage.getItem('props')) || [];
             let results = [];
 
-
-
-            //delete the one you don't need 
-            // props = props.filter(item => item !== "Blueberry-tart");
             //delete the same dishes
             props = props.filter((value, index, self) => self.indexOf(value) === index);
 

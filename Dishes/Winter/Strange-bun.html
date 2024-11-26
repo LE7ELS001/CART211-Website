@@ -10,6 +10,9 @@
     <link rel="stylesheet" href="../../styles.css">
     <link rel="icon" href="../../Assets/Strange_Bun.png" type="image/x-icon">
     <style>
+        /*
+          adjust the layout 
+        */
         .Name2 {
             margin-bottom: 25px;
         }
@@ -161,11 +164,9 @@
     <script>
 
         document.addEventListener("DOMContentLoaded", function () {
-            // localStorage.removeItem('props');
+
             let props = JSON.parse(localStorage.getItem('props')) || [];
 
-            //delete the one you don't need
-            // props = props.filter(item => item !== "Blueberry-tart");
             props = props.filter((value, index, self) => self.indexOf(value) === index);
             // console.log(props);
             props = props.filter(item => typeof item === 'object');
@@ -191,7 +192,7 @@
         function scrollToTop() {
             window.scrollTo({
                 top: 0,
-                behavior: 'smooth' // 平滑滚动
+                behavior: 'smooth'
             });
         }
 

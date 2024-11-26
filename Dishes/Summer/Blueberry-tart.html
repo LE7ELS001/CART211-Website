@@ -158,8 +158,11 @@
 
     <script>
 
+        /*
+         In local, these can load in dish page, but online all these have to preload in index or mainpage 
+         otherwise, search won't show image 
+        */
         document.addEventListener("DOMContentLoaded", function () {
-            // localStorage.removeItem('props');
             let props = JSON.parse(localStorage.getItem('props')) || [];
 
             //delete the one you don't need
@@ -189,7 +192,7 @@
         function scrollToTop() {
             window.scrollTo({
                 top: 0,
-                behavior: 'smooth' // 平滑滚动
+                behavior: 'smooth'
             });
         }
 

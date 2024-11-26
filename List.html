@@ -211,6 +211,7 @@
             crossorigin="anonymous"></script>
 
         <script>
+            //get col
             const ths = document.querySelectorAll('th[scope="col"]');
             let nameHeader;
             let sellPriceHeader;
@@ -220,6 +221,7 @@
                 order: 'asc'
             };
 
+            //check which col name or sell price
             ths.forEach(th => {
                 if (th.textContent.includes("Name")) {
                     nameHeader = th;
@@ -229,6 +231,7 @@
                 }
             });
 
+            //name
             if (nameHeader) {
                 nameHeader.addEventListener('click', function () {
                     sortTable('name');
@@ -244,6 +247,7 @@
                 });
             }
 
+            //sell price 
             if (sellPriceHeader) {
                 sellPriceHeader.addEventListener('click', function () {
                     sortTable('sellPrice');
@@ -261,6 +265,7 @@
                 });
             }
 
+            //triangle up and down effect
             function toggleIcon(icon) {
                 if (icon.classList.contains('fa-sort')) {
                     icon.classList.remove('fa-sort');
@@ -274,6 +279,7 @@
                 }
             }
 
+            //reset icon when click other icon 
             function resetIcons() {
                 ths.forEach(th => {
                     const icon = th.querySelector('i');
@@ -285,11 +291,13 @@
                 });
             }
 
+
+            //sorting
             function sortTable(column) {
                 const rows = Array.from(document.querySelectorAll('table tbody tr'));
-                const index = column === 'name' ? 1 : 6;  // 根据列名定位索引，这里假设 Name 是第 1 列，Sell Price 是第 6 列
+                const index = column === 'name' ? 1 : 6;
 
-                // 根据当前排序列和顺序反转排序
+                // change sorting function asc or desc
                 if (currentSort.column === column) {
                     currentSort.order = currentSort.order === 'asc' ? 'desc' : 'asc';
                 } else {
@@ -301,7 +309,7 @@
                     const cellA = rowA.cells[index].textContent.trim();
                     const cellB = rowB.cells[index].textContent.trim();
 
-                    // 判断是否为数字
+                    // check is number(name:string; sell price:number)
                     const isNumber = !isNaN(cellA) && !isNaN(cellB);
 
                     let comparison = 0;
@@ -320,23 +328,23 @@
 
                 // renew data order
                 const tbody = document.querySelector('table tbody');
-                rows.forEach(row => tbody.appendChild(row));  // 重新排序表格行
+                rows.forEach(row => tbody.appendChild(row));
             }
 
             //search function 
             document.getElementById('searchInput').addEventListener('input', function () {
-                const searchQuery = this.value.toLowerCase();  // 获取搜索输入并转为小写
-                const rows = document.querySelectorAll('table tbody tr');  // 获取所有表格行
+                const searchQuery = this.value.toLowerCase();
+                const rows = document.querySelectorAll('table tbody tr');
 
                 rows.forEach(row => {
-                    const nameCell = row.cells[1];  // 假设"Name"在第2列
-                    const nameText = nameCell.textContent.toLowerCase();  // 获取Name列的文本内容并转为小写
+                    const nameCell = row.cells[1];
+                    const nameText = nameCell.textContent.toLowerCase();
 
-                    // 如果名称包含搜索内容，则显示该行，否则隐藏
+
                     if (nameText.includes(searchQuery)) {
-                        row.style.display = '';  // 显示行
+                        row.style.display = '';
                     } else {
-                        row.style.display = 'none';  // 隐藏行
+                        row.style.display = 'none';
                     }
                 });
             });
@@ -344,7 +352,7 @@
             function scrollToTop() {
                 window.scrollTo({
                     top: 0,
-                    behavior: 'smooth' // 平滑滚动
+                    behavior: 'smooth'
                 });
             }
 

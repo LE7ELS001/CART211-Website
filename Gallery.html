@@ -11,6 +11,9 @@
     <link rel="stylesheet" href="styles.css">
 
     <style>
+        /*
+        pagination  
+        */
         .pagination {
             display: flex;
             justify-content: center;
@@ -62,6 +65,10 @@
             background-image: url('Assets/Seasons_buttons-choose.png');
         }
 
+        /*
+        seasons-buttons 
+        */
+
         #seasons-buttons {
 
             background-image: url('Assets/Seasons_buttons.png');
@@ -94,6 +101,9 @@
             background-image: url('Assets/Seasons_buttons-choose.png');
         }
 
+        /*
+        seaons-buttons-all 
+        */
         #all-buttons {
             background-image: url('Assets/Seasons_buttons.png');
             background-size: cover;
@@ -122,6 +132,9 @@
             background-image: url('Assets/Seasons_buttons-choose.png');
         }
 
+        /*
+        sorting button 
+        */
         #dropdownMenuButton {
             background-image: url('Assets/Seasons_buttons.png');
             background-size: cover;
@@ -527,7 +540,7 @@
                 previousBtn.classList.add('btn-outline-primary');
                 previousBtn.disabled = false;
             }
-            // previousBtn.disabled = currentPage === 1;
+
 
 
             //page === last page next button disable
@@ -541,9 +554,10 @@
                 nextBtn.classList.add('btn-outline-primary');
                 nextBtn.disabled = false;
             }
-            // nextBtn.disabled = currentPage === totalPages;
+
         }
 
+        //card show or hidden
         function updateCardsDisplay() {
             const start = (currentPage - 1) * itemsPerPage;
             const end = start + itemsPerPage;
@@ -561,6 +575,7 @@
             })
         }
 
+        //page number update 
         function updatePageNumbers(totalPages) {
             pageNumbers.innerHTML = '';
             for (let i = 1; i <= totalPages; i++) {
@@ -584,6 +599,7 @@
             }
         }
 
+        // next page and previous page buttons
         previousBtn.addEventListener('click', () => {
             if (currentPage > 1) {
                 currentPage--;
@@ -598,6 +614,7 @@
             }
         });
 
+        //filter 
         function applyFilters() {
             filteredCards = Array.from(cards).filter(card => {
                 const cardCategory = card.getAttribute('data-category');

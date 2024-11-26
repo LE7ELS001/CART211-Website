@@ -11,6 +11,9 @@
     <link rel="stylesheet" href="styles.css">
 
     <style>
+        /*
+        cursor 
+        */
         body {
             cursor: url("Assets/cursor.cur"), auto;
         }
@@ -25,6 +28,9 @@
 
         }
 
+        /*
+        footer
+        */
         .footerFrame {
             margin-top: 1px;
         }
@@ -46,6 +52,10 @@
             background-color: rgb(37, 110, 206);
         }
 
+
+        /*
+        main and audio 
+        */
         .mainScreen {
             height: 100vh;
         }
@@ -110,13 +120,15 @@
 
     <script>
 
+        //delete the one you don't need
+        // props = props.filter(item => item !== "Blueberry-tart");
+
+
         //preload
         document.addEventListener("DOMContentLoaded", function () {
-            // localStorage.removeItem('props');
+
             let props = JSON.parse(localStorage.getItem('props')) || [];
 
-            //delete the one you don't need
-            // props = props.filter(item => item !== "Blueberry-tart");
             props = props.filter((value, index, self) => self.indexOf(value) === index);
             // console.log(props);
             props = props.filter(item => typeof item === 'object');
@@ -139,11 +151,9 @@
         });
 
         document.addEventListener("DOMContentLoaded", function () {
-            // localStorage.removeItem('props');
+
             let props = JSON.parse(localStorage.getItem('props')) || [];
 
-            //delete the one you don't need
-            // props = props.filter(item => item !== "Blueberry-tart");
             props = props.filter((value, index, self) => self.indexOf(value) === index);
             // console.log(props);
             props = props.filter(item => typeof item === 'object');
@@ -166,11 +176,10 @@
         });
 
         document.addEventListener("DOMContentLoaded", function () {
-            // localStorage.removeItem('props');
+
             let props = JSON.parse(localStorage.getItem('props')) || [];
 
-            //delete the one you don't need
-            // props = props.filter(item => item !== "Blueberry-tart");
+
             props = props.filter((value, index, self) => self.indexOf(value) === index);
             // console.log(props);
             props = props.filter(item => typeof item === 'object');
@@ -194,11 +203,10 @@
 
 
         document.addEventListener("DOMContentLoaded", function () {
-            // localStorage.removeItem('props');
+
             let props = JSON.parse(localStorage.getItem('props')) || [];
 
-            //delete the one you don't need
-            // props = props.filter(item => item !== "Blueberry-tart");
+
             props = props.filter((value, index, self) => self.indexOf(value) === index);
             // console.log(props);
             props = props.filter(item => typeof item === 'object');
@@ -221,11 +229,10 @@
         });
 
         document.addEventListener("DOMContentLoaded", function () {
-            // localStorage.removeItem('props');
+
             let props = JSON.parse(localStorage.getItem('props')) || [];
 
-            //delete the one you don't need
-            // props = props.filter(item => item !== "Blueberry-tart");
+
             props = props.filter((value, index, self) => self.indexOf(value) === index);
             // console.log(props);
             props = props.filter(item => typeof item === 'object');
@@ -249,11 +256,10 @@
 
 
         document.addEventListener("DOMContentLoaded", function () {
-            // localStorage.removeItem('props');
+
             let props = JSON.parse(localStorage.getItem('props')) || [];
 
-            //delete the one you don't need
-            // props = props.filter(item => item !== "Blueberry-tart");
+
             props = props.filter((value, index, self) => self.indexOf(value) === index);
             // console.log(props);
             props = props.filter(item => typeof item === 'object');
@@ -276,11 +282,9 @@
         });
 
         document.addEventListener("DOMContentLoaded", function () {
-            // localStorage.removeItem('props');
+
             let props = JSON.parse(localStorage.getItem('props')) || [];
 
-            //delete the one you don't need
-            // props = props.filter(item => item !== "Blueberry-tart");
             props = props.filter((value, index, self) => self.indexOf(value) === index);
             // console.log(props);
             props = props.filter(item => typeof item === 'object');
@@ -303,11 +307,9 @@
         });
 
         document.addEventListener("DOMContentLoaded", function () {
-            // localStorage.removeItem('props');
+
             let props = JSON.parse(localStorage.getItem('props')) || [];
 
-            //delete the one you don't need
-            // props = props.filter(item => item !== "Blueberry-tart");
             props = props.filter((value, index, self) => self.indexOf(value) === index);
             // console.log(props);
             props = props.filter(item => typeof item === 'object');
@@ -331,11 +333,9 @@
 
 
         document.addEventListener("DOMContentLoaded", function () {
-            // localStorage.removeItem('props');
             let props = JSON.parse(localStorage.getItem('props')) || [];
 
-            //delete the one you don't need
-            // props = props.filter(item => item !== "Blueberry-tart");
+
             props = props.filter((value, index, self) => self.indexOf(value) === index);
             // console.log(props);
             props = props.filter(item => typeof item === 'object');

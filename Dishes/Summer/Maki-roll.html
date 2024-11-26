@@ -11,6 +11,10 @@
     <link rel="icon" href="../../Assets/Maki_Roll.png" type="image/x-icon">
 
     <style>
+        /*
+         dish text description 
+         because of the text length, some layout need to be adjusted 
+        */
         .Name2 {
             margin-bottom: 25px;
 
@@ -161,12 +165,15 @@
 
     <script>
 
+        /*
+          In local, these can load in dish page, but online all these have to preload in index or mainpage 
+         otherwise, search won't show image 
+         */
         document.addEventListener("DOMContentLoaded", function () {
-            // localStorage.removeItem('props');
+
             let props = JSON.parse(localStorage.getItem('props')) || [];
 
-            //delete the one you don't need
-            // props = props.filter(item => item !== "Blueberry-tart");
+
             props = props.filter((value, index, self) => self.indexOf(value) === index);
             // console.log(props);
             props = props.filter(item => typeof item === 'object');
@@ -192,7 +199,7 @@
         function scrollToTop() {
             window.scrollTo({
                 top: 0,
-                behavior: 'smooth' // 平滑滚动
+                behavior: 'smooth'
             });
         }
 
