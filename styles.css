@@ -69,7 +69,6 @@ footer {
 */
 
 .full-height {
-    /* background-image: url("Assets/background.png"); */
     background-color: black;
     background-size: cover;
     background-position: center;
@@ -537,7 +536,7 @@ footer {
 */
 
 .Blueberry-tart {
-    background-image: url("../../Assets/background.png");
+    background-image: url("../Assets/background.png");
     background-size: cover;
     background-position: center;
     height: 100%;
