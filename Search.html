@@ -149,6 +149,7 @@
             if (results.length > 0) {
                 results.forEach(function (result) {
 
+                    //the name must correspond to the webpage name
                     let link = document.createElement('a');
                     link.href = "Dishes/" + result.category + '/' + result.name + '.html';
                     link.textContent = result.name;
